@@ -1,0 +1,84 @@
+.hero{
+    
+    
+
+
+    @include breakpoint-up(large){
+      display: flex;
+      min-height: 43rem;
+      
+
+      
+      &__text{
+          position: absolute;
+          top: 30%;
+          left: 15%;
+      }
+
+    }
+
+
+    &__image{
+        
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        min-height: 12.5rem;
+        width: 100%;
+
+
+        @include breakpoint-up(large){
+
+            background-image: url('/img/bg-top-couple.png');
+            text-align: left;
+            min-height: 18.125rem;
+           
+
+        }
+
+
+
+    &::before{
+        content:"";
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url('/img/bg-top-couple.png');
+        background-repeat: no-repeat;
+        background-position: center top;
+        z-index: -1;
+        background-size: 100%;
+    }
+
+    }
+
+    &__text{
+
+        text-align: center;
+
+        h1{
+            font-weight: 300;
+            font-size: 50px;
+            line-height: 1.15;
+            margin-bottom: 1.5rem;
+
+            @include breakpoint-down(small){
+                color: $maliblue;
+        
+            }
+        }
+
+        p{
+            font-size: 27px;
+            margin-bottom: 2.25rem;
+        }
+
+
+
+    }
+
+
+
+}
+
